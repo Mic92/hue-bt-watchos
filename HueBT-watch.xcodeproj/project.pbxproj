@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		837AF194240C52C900189462 /* BleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837AF193240C52C900189462 /* BleManager.swift */; };
+		83CA1261240AE82B00B0E577 /* HueBT-watch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 83CA1260240AE82B00B0E577 /* HueBT-watch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		83CA1267240AE82B00B0E577 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CA1265240AE82B00B0E577 /* Interface.storyboard */; };
+		83CA1269240AE82F00B0E577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CA1268240AE82F00B0E577 /* Assets.xcassets */; };
+		83CA1270240AE82F00B0E577 /* HueBT-watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 83CA126F240AE82F00B0E577 /* HueBT-watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		83CA1275240AE82F00B0E577 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA1274240AE82F00B0E577 /* ContentView.swift */; };
+		83CA1277240AE82F00B0E577 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA1276240AE82F00B0E577 /* HostingController.swift */; };
+		83CA1279240AE82F00B0E577 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA1278240AE82F00B0E577 /* ExtensionDelegate.swift */; };
+		83CA127F240AE83000B0E577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CA127E240AE83000B0E577 /* Assets.xcassets */; };
+		83CA1282240AE83000B0E577 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CA1281240AE83000B0E577 /* Preview Assets.xcassets */; };
+		83CA1293240B04A100B0E577 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA1292240B04A100B0E577 /* InterfaceController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83CA1262240AE82B00B0E577 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CA1256240AE82A00B0E577 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CA125F240AE82B00B0E577;
+			remoteInfo = "HueBT-watch WatchKit App";
+		};
+		83CA1271240AE82F00B0E577 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CA1256240AE82A00B0E577 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CA126E240AE82F00B0E577;
+			remoteInfo = "HueBT-watch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		83CA128A240AE83000B0E577 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				83CA1270240AE82F00B0E577 /* HueBT-watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CA128E240AE83000B0E577 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				83CA1261240AE82B00B0E577 /* HueBT-watch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		837AF193240C52C900189462 /* BleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleManager.swift; sourceTree = "<group>"; };
+		83CA125C240AE82A00B0E577 /* HueBT-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HueBT-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CA1260240AE82B00B0E577 /* HueBT-watch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HueBT-watch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CA1266240AE82B00B0E577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		83CA1268240AE82F00B0E577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83CA126A240AE82F00B0E577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83CA126F240AE82F00B0E577 /* HueBT-watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HueBT-watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CA1274240AE82F00B0E577 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		83CA1276240AE82F00B0E577 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		83CA1278240AE82F00B0E577 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		83CA127E240AE83000B0E577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83CA1281240AE83000B0E577 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		83CA1283240AE83000B0E577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83CA1284240AE83000B0E577 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		83CA1292240B04A100B0E577 /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83CA126C240AE82F00B0E577 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83CA1255240AE82A00B0E577 = {
+			isa = PBXGroup;
+			children = (
+				83CA1264240AE82B00B0E577 /* HueBT-watch WatchKit App */,
+				83CA1273240AE82F00B0E577 /* HueBT-watch WatchKit Extension */,
+				83CA125D240AE82A00B0E577 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83CA125D240AE82A00B0E577 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83CA125C240AE82A00B0E577 /* HueBT-watch.app */,
+				83CA1260240AE82B00B0E577 /* HueBT-watch WatchKit App.app */,
+				83CA126F240AE82F00B0E577 /* HueBT-watch WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83CA1264240AE82B00B0E577 /* HueBT-watch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				83CA1265240AE82B00B0E577 /* Interface.storyboard */,
+				83CA1268240AE82F00B0E577 /* Assets.xcassets */,
+				83CA126A240AE82F00B0E577 /* Info.plist */,
+			);
+			path = "HueBT-watch WatchKit App";
+			sourceTree = "<group>";
+		};
+		83CA1273240AE82F00B0E577 /* HueBT-watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				83CA1292240B04A100B0E577 /* InterfaceController.swift */,
+				83CA1274240AE82F00B0E577 /* ContentView.swift */,
+				83CA1276240AE82F00B0E577 /* HostingController.swift */,
+				837AF193240C52C900189462 /* BleManager.swift */,
+				83CA1278240AE82F00B0E577 /* ExtensionDelegate.swift */,
+				83CA127E240AE83000B0E577 /* Assets.xcassets */,
+				83CA1283240AE83000B0E577 /* Info.plist */,
+				83CA1284240AE83000B0E577 /* PushNotificationPayload.apns */,
+				83CA1280240AE83000B0E577 /* Preview Content */,
+			);
+			path = "HueBT-watch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		83CA1280240AE83000B0E577 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				83CA1281240AE83000B0E577 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83CA125B240AE82A00B0E577 /* HueBT-watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CA128F240AE83000B0E577 /* Build configuration list for PBXNativeTarget "HueBT-watch" */;
+			buildPhases = (
+				83CA125A240AE82A00B0E577 /* Resources */,
+				83CA128E240AE83000B0E577 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83CA1263240AE82B00B0E577 /* PBXTargetDependency */,
+			);
+			name = "HueBT-watch";
+			productName = "HueBT-watch";
+			productReference = 83CA125C240AE82A00B0E577 /* HueBT-watch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		83CA125F240AE82B00B0E577 /* HueBT-watch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CA128B240AE83000B0E577 /* Build configuration list for PBXNativeTarget "HueBT-watch WatchKit App" */;
+			buildPhases = (
+				83CA125E240AE82B00B0E577 /* Resources */,
+				83CA128A240AE83000B0E577 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83CA1272240AE82F00B0E577 /* PBXTargetDependency */,
+			);
+			name = "HueBT-watch WatchKit App";
+			productName = "HueBT-watch WatchKit App";
+			productReference = 83CA1260240AE82B00B0E577 /* HueBT-watch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		83CA126E240AE82F00B0E577 /* HueBT-watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CA1287240AE83000B0E577 /* Build configuration list for PBXNativeTarget "HueBT-watch WatchKit Extension" */;
+			buildPhases = (
+				83CA126B240AE82F00B0E577 /* Sources */,
+				83CA126C240AE82F00B0E577 /* Frameworks */,
+				83CA126D240AE82F00B0E577 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HueBT-watch WatchKit Extension";
+			productName = "HueBT-watch WatchKit Extension";
+			productReference = 83CA126F240AE82F00B0E577 /* HueBT-watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CA1256240AE82A00B0E577 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Shannan Lekwati";
+				TargetAttributes = {
+					83CA125B240AE82A00B0E577 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					83CA125F240AE82B00B0E577 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					83CA126E240AE82F00B0E577 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 83CA1259240AE82A00B0E577 /* Build configuration list for PBXProject "HueBT-watch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CA1255240AE82A00B0E577;
+			productRefGroup = 83CA125D240AE82A00B0E577 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83CA125B240AE82A00B0E577 /* HueBT-watch */,
+				83CA125F240AE82B00B0E577 /* HueBT-watch WatchKit App */,
+				83CA126E240AE82F00B0E577 /* HueBT-watch WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83CA125A240AE82A00B0E577 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CA125E240AE82B00B0E577 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CA1269240AE82F00B0E577 /* Assets.xcassets in Resources */,
+				83CA1267240AE82B00B0E577 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CA126D240AE82F00B0E577 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CA1282240AE83000B0E577 /* Preview Assets.xcassets in Resources */,
+				83CA127F240AE83000B0E577 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83CA126B240AE82F00B0E577 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CA1277240AE82F00B0E577 /* HostingController.swift in Sources */,
+				83CA1293240B04A100B0E577 /* InterfaceController.swift in Sources */,
+				837AF194240C52C900189462 /* BleManager.swift in Sources */,
+				83CA1275240AE82F00B0E577 /* ContentView.swift in Sources */,
+				83CA1279240AE82F00B0E577 /* ExtensionDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83CA1263240AE82B00B0E577 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83CA125F240AE82B00B0E577 /* HueBT-watch WatchKit App */;
+			targetProxy = 83CA1262240AE82B00B0E577 /* PBXContainerItemProxy */;
+		};
+		83CA1272240AE82F00B0E577 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83CA126E240AE82F00B0E577 /* HueBT-watch WatchKit Extension */;
+			targetProxy = 83CA1271240AE82F00B0E577 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83CA1265240AE82B00B0E577 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83CA1266240AE82B00B0E577 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83CA1285240AE83000B0E577 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83CA1286240AE83000B0E577 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83CA1288240AE83000B0E577 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HueBT-watch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = X354S595HH;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "HueBT-watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shannan.HueBT-watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		83CA1289240AE83000B0E577 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HueBT-watch WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "HueBT-watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shannan.HueBT-watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		83CA128C240AE83000B0E577 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X354S595HH;
+				IBSC_MODULE = HueBT_watch_WatchKit_Extension;
+				INFOPLIST_FILE = "HueBT-watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shannan.HueBT-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		83CA128D240AE83000B0E577 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = HueBT_watch_WatchKit_Extension;
+				INFOPLIST_FILE = "HueBT-watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shannan.HueBT-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		83CA1290240AE83000B0E577 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X354S595HH;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shannan.HueBT-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		83CA1291240AE83000B0E577 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X354S595HH;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shannan.HueBT-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83CA1259240AE82A00B0E577 /* Build configuration list for PBXProject "HueBT-watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CA1285240AE83000B0E577 /* Debug */,
+				83CA1286240AE83000B0E577 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CA1287240AE83000B0E577 /* Build configuration list for PBXNativeTarget "HueBT-watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CA1288240AE83000B0E577 /* Debug */,
+				83CA1289240AE83000B0E577 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CA128B240AE83000B0E577 /* Build configuration list for PBXNativeTarget "HueBT-watch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CA128C240AE83000B0E577 /* Debug */,
+				83CA128D240AE83000B0E577 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CA128F240AE83000B0E577 /* Build configuration list for PBXNativeTarget "HueBT-watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CA1290240AE83000B0E577 /* Debug */,
+				83CA1291240AE83000B0E577 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CA1256240AE82A00B0E577 /* Project object */;
+}
