@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		837AF194240C52C900189462 /* BleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837AF193240C52C900189462 /* BleManager.swift */; };
+		8334122324155B8700F4354E /* BleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837AF193240C52C900189462 /* BleManager.swift */; };
 		83CA1261240AE82B00B0E577 /* HueBT-watch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 83CA1260240AE82B00B0E577 /* HueBT-watch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		83CA1267240AE82B00B0E577 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CA1265240AE82B00B0E577 /* Interface.storyboard */; };
 		83CA1269240AE82F00B0E577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CA1268240AE82F00B0E577 /* Assets.xcassets */; };
@@ -17,7 +17,6 @@
 		83CA1279240AE82F00B0E577 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA1278240AE82F00B0E577 /* ExtensionDelegate.swift */; };
 		83CA127F240AE83000B0E577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CA127E240AE83000B0E577 /* Assets.xcassets */; };
 		83CA1282240AE83000B0E577 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CA1281240AE83000B0E577 /* Preview Assets.xcassets */; };
-		83CA1293240B04A100B0E577 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA1292240B04A100B0E577 /* InterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +76,6 @@
 		83CA1281240AE83000B0E577 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		83CA1283240AE83000B0E577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83CA1284240AE83000B0E577 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		83CA1292240B04A100B0E577 /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +121,6 @@
 		83CA1273240AE82F00B0E577 /* HueBT-watch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				83CA1292240B04A100B0E577 /* InterfaceController.swift */,
 				83CA1274240AE82F00B0E577 /* ContentView.swift */,
 				83CA1276240AE82F00B0E577 /* HostingController.swift */,
 				837AF193240C52C900189462 /* BleManager.swift */,
@@ -273,8 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83CA1277240AE82F00B0E577 /* HostingController.swift in Sources */,
-				83CA1293240B04A100B0E577 /* InterfaceController.swift in Sources */,
-				837AF194240C52C900189462 /* BleManager.swift in Sources */,
+				8334122324155B8700F4354E /* BleManager.swift in Sources */,
 				83CA1275240AE82F00B0E577 /* ContentView.swift in Sources */,
 				83CA1279240AE82F00B0E577 /* ExtensionDelegate.swift in Sources */,
 			);

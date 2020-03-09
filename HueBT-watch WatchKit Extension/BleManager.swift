@@ -1,56 +1,43 @@
 import CoreBluetooth
 
-
-class Bulb {
+class Bulb: Identifiable {
     let peripheral: CBPeripheral
     var lightCharacteristic: CBCharacteristic?;
     var brightnessCharacteristic: CBCharacteristic?;
+    var nameCharacteristic: CBCharacteristic?;
+    @Published var name: String?;
+    let id: UUID;
     @Published var lightOn = false
     @Published var brigthness = 0
-    @Published var macAddress: String?
     
     init(_ p: CBPeripheral) {
         self.peripheral = p
+        self.id = p.identifier
     }
 }
 
 class BleManager: NSObject, ObservableObject {
     var centralManager: CBCentralManager!
-    var bulbs = [Bulb]()
+    @Published var bulbs = [Bulb]()
     @Published var status = "startup..."
-    
+
     static let LightService = CBUUID(string: "932c32bd-0000-47a2-835a-a8d455b859dd")
+    static let NameService = CBUUID(string: "0000fe0f-0000-1000-8000-00805f9b34fb")
     static let LightCharacteristic = CBUUID(string: "932c32bd-0002-47a2-835a-a8d455b859dd")
     static let BrightnessCharacteristic = CBUUID(string: "932c32bd-0003-47a2-835a-a8d455b859dd")
     static let ColorCharacteristic = CBUUID(string: "932c32bd-0005-47a2-835a-a8d455b859dd")
+    static let NameCharacteristic = CBUUID(string: "97fe6561-0003-4f62-86e9-b71ee2da3d22")
     
     override init() {
         super.init()
         centralManager = CBCentralManager(delegate: self, queue: nil)
     }
     func scan() {
-        centralManager.scanForPeripherals(withServices: [BleManager.LightService], options: [CBCentralManagerScanOptionAllowDuplicatesKey: NSNumber(value: true as Bool)])
+        status = "scanning..."
+        centralManager.scanForPeripherals(withServices: [BleManager.NameService], options: [CBCentralManagerScanOptionAllowDuplicatesKey: NSNumber(value: true as Bool)])
     }
     
     func cleanup(_ peripheral: CBPeripheral) {
-        /*guard discoveredPeripheral?.state != .disconnected,
-         let services = discoveredPeripheral?.services else {
-         centralManager.cancelPeripheralConnection(discoveredPeripheral!)
-         return
-         }
-         for service in services {
-         if let characteristics = service.characteristics {
-         for characteristic in characteristics {
-         if characteristic.uuid.isEqual(BleManager.LightCharacteristic) {
-         if characteristic.isNotifying {
-         discoveredPeripheral?.setNotifyValue(false, for: characteristic)
-         return
-         }
-         
-         }
-         }
-         }
-         }*/
         bulbs.removeFirst(bulbs.firstIndex(where: { $0.peripheral == peripheral })!);
         centralManager.cancelPeripheralConnection(peripheral)
     }
@@ -69,7 +56,12 @@ extension BleManager: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        status = "discovered peripheral"
+        print("discovered \(peripheral.identifier)")
+        for bulb in bulbs {
+            if bulb.peripheral.identifier == peripheral.identifier {
+                return
+            }
+        }
         bulbs.append(Bulb(peripheral))
         central.connect(peripheral, options: [:])
     }
@@ -80,10 +72,10 @@ extension BleManager: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        status = "connected to peripheral"
+        status = "connected"
         central.stopScan()
         peripheral.delegate = self
-        peripheral.discoverServices([BleManager.LightService])
+        peripheral.discoverServices([BleManager.LightService, BleManager.NameService])
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
@@ -94,21 +86,27 @@ extension BleManager: CBCentralManagerDelegate {
 extension BleManager: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         if let error = error {
-            print(error.localizedDescription)
+            print("Got error when discovering services: \(error.localizedDescription)")
             cleanup(peripheral)
             return
         }
         
         guard let services = peripheral.services else { return }
         for service in services {
-            status = "discovered service"
-            peripheral.discoverCharacteristics([BleManager.LightCharacteristic, BleManager.BrightnessCharacteristic], for: service)
+            print("discovered service \(service.uuid)")
+            if (service.uuid == BleManager.NameService) {
+                status = "discovered name service"
+                peripheral.discoverCharacteristics([BleManager.NameCharacteristic], for: service)
+            } else if (service.uuid == BleManager.LightService) {
+                status = "discovered light service"
+                peripheral.discoverCharacteristics([BleManager.LightCharacteristic, BleManager.BrightnessCharacteristic], for: service)
+            }
         }
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         if let error = error {
-            print(error.localizedDescription)
+            print("Got error when discovering characteristics: \(error.localizedDescription)")
             cleanup(peripheral)
             return
         }
@@ -116,39 +114,64 @@ extension BleManager: CBPeripheralDelegate {
         
         guard let characteristics = service.characteristics else { return }
         for characteristic in characteristics {
+            let name : String
             if characteristic.uuid == BleManager.LightCharacteristic {
-                status = "discovered LightCharacteristic"
+                name = "light"
                 bulb.lightCharacteristic = characteristic
+                let light: [UInt8] = [0]
+                peripheral.writeValue(Data(light), for: characteristic, type: CBCharacteristicWriteType.withResponse)
             } else if characteristic.uuid == BleManager.BrightnessCharacteristic {
-                status = "discovered BrightnessCharacteristic"
+                name = "brightness"
                 bulb.brightnessCharacteristic = characteristic
+            } else if characteristic.uuid == BleManager.NameCharacteristic {
+                print("discovered name characteristic")
+                name = "name"
+                //peripheral.readValue(for: characteristic)
+            } else {
+                name = "unknown \(characteristic.uuid)"
             }
+            print("discovered \(name) characteristic in \(service.uuid)")
         }
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if let error = error {
-            print(error.localizedDescription)
+            print("Got error when updating characteristics: \(error.localizedDescription)")
             return
         }
         guard let bulb = bulbs.first(where: { $0.peripheral == peripheral }) else { return }
         
         if characteristic == bulb.lightCharacteristic {
             guard let newData = characteristic.value else { return }
-            let stringFromData = String(data: newData, encoding: .utf8)
-            print("received \(stringFromData ?? "nothing")")
             bulb.lightOn = newData[0] == 0x01;
+        } else if characteristic == bulb.nameCharacteristic {
+            guard let newData = characteristic.value else { return }
+            let name = String(data: newData, encoding: .utf8)
+            print("received name \(name ?? "nothing")")
+            bulb.name = name
+        }
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
+        if let error = error {
+            print("Got error after writing \(characteristic.uuid): \(error.localizedDescription)")
+            return
         }
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
-        if let error = error { print(error.localizedDescription) }
-        guard characteristic.uuid == BleManager.LightCharacteristic else { return }
-        if characteristic.isNotifying {
-            print("Notification began on \(characteristic)")
-        } else {
-            print("Notification stopped on \(characteristic). Disconnecting...")
+        if let error = error {
+            print("Got error after notification state: \(error.localizedDescription) for characteristic \(characteristic.uuid)")
         }
+        let name: String
+        if characteristic.uuid == BleManager.LightCharacteristic {
+            name = "light"
+        } else if characteristic.uuid == BleManager.NameCharacteristic {
+            name = "name"
+        } else {
+            return
+        }
+        print("Notification \(characteristic.isNotifying ? "began" : "stop") on \(name)")
     }
     
     // Stub to stop run-time warning

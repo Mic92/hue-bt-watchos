@@ -4,7 +4,15 @@ import CoreBluetooth
 struct ContentView: View {
     @ObservedObject private var bleManager = BleManager()
     var body: some View {
-        Text(bleManager.status)
+        VStack {
+            Text(bleManager.status)
+            List(bleManager.bulbs) {bulb in
+                HStack {
+                  Text(bulb.lightOn ? "on" : "off")
+                  Text(bulb.name ?? "Lookup name")
+                }
+            }
+        }
     }
 }
 
