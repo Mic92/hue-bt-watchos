@@ -177,4 +177,3 @@ extension BleManager: CBPeripheralDelegate {
     // Stub to stop run-time warning
     func peripheral(_ peripheral: CBPeripheral, didModifyServices invalidatedServices: [CBService]) {}
 }
-

@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30F6E66224143F020058D1C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E66124143F020058D1C5 /* AppDelegate.swift */; };
+		30F6E66424143F020058D1C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E66324143F020058D1C5 /* SceneDelegate.swift */; };
+		30F6E66624143F020058D1C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E66524143F020058D1C5 /* ContentView.swift */; };
+		30F6E66824143F030058D1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F6E66724143F030058D1C5 /* Assets.xcassets */; };
+		30F6E66B24143F030058D1C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F6E66A24143F030058D1C5 /* Preview Assets.xcassets */; };
+		30F6E66E24143F030058D1C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F6E66C24143F030058D1C5 /* LaunchScreen.storyboard */; };
+		30F6E67324143F030058D1C5 /* Hue-bluetooth WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 30F6E67224143F030058D1C5 /* Hue-bluetooth WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		30F6E67924143F030058D1C5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F6E67724143F030058D1C5 /* Interface.storyboard */; };
+		30F6E67B24143F030058D1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F6E67A24143F030058D1C5 /* Assets.xcassets */; };
+		30F6E68224143F030058D1C5 /* Hue-bluetooth WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 30F6E68124143F030058D1C5 /* Hue-bluetooth WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		30F6E68724143F030058D1C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E68624143F030058D1C5 /* ContentView.swift */; };
+		30F6E68924143F030058D1C5 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E68824143F030058D1C5 /* HostingController.swift */; };
+		30F6E68B24143F030058D1C5 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E68A24143F030058D1C5 /* ExtensionDelegate.swift */; };
+		30F6E68D24143F030058D1C5 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E68C24143F030058D1C5 /* NotificationController.swift */; };
+		30F6E68F24143F030058D1C5 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E68E24143F030058D1C5 /* NotificationView.swift */; };
+		30F6E69124143F030058D1C5 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E69024143F030058D1C5 /* ComplicationController.swift */; };
+		30F6E69324143F040058D1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F6E69224143F040058D1C5 /* Assets.xcassets */; };
+		30F6E69624143F040058D1C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F6E69524143F040058D1C5 /* Preview Assets.xcassets */; };
+		30F6E6A724143F5A0058D1C5 /* BleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E6A624143F5A0058D1C5 /* BleManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30F6E67424143F030058D1C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30F6E65624143F010058D1C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30F6E67124143F030058D1C5;
+			remoteInfo = "Hue-bluetooth WatchKit App";
+		};
+		30F6E68324143F030058D1C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30F6E65624143F010058D1C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30F6E68024143F030058D1C5;
+			remoteInfo = "Hue-bluetooth WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		30F6E69E24143F040058D1C5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				30F6E68224143F030058D1C5 /* Hue-bluetooth WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30F6E6A224143F040058D1C5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				30F6E67324143F030058D1C5 /* Hue-bluetooth WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		30F6E65E24143F020058D1C5 /* Hue-bluetooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hue-bluetooth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30F6E66124143F020058D1C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		30F6E66324143F020058D1C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		30F6E66524143F020058D1C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		30F6E66724143F030058D1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30F6E66A24143F030058D1C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30F6E66D24143F030058D1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30F6E66F24143F030058D1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30F6E67224143F030058D1C5 /* Hue-bluetooth WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hue-bluetooth WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30F6E67824143F030058D1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		30F6E67A24143F030058D1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30F6E67C24143F030058D1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30F6E68124143F030058D1C5 /* Hue-bluetooth WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Hue-bluetooth WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30F6E68624143F030058D1C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		30F6E68824143F030058D1C5 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		30F6E68A24143F030058D1C5 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		30F6E68C24143F030058D1C5 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		30F6E68E24143F030058D1C5 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		30F6E69024143F030058D1C5 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		30F6E69224143F040058D1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30F6E69524143F040058D1C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30F6E69724143F040058D1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30F6E69824143F040058D1C5 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		30F6E6A624143F5A0058D1C5 /* BleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30F6E65B24143F020058D1C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30F6E67E24143F030058D1C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30F6E65524143F010058D1C5 = {
+			isa = PBXGroup;
+			children = (
+				30F6E66024143F020058D1C5 /* Hue-bluetooth */,
+				30F6E67624143F030058D1C5 /* Hue-bluetooth WatchKit App */,
+				30F6E68524143F030058D1C5 /* Hue-bluetooth WatchKit Extension */,
+				30F6E65F24143F020058D1C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		30F6E65F24143F020058D1C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30F6E65E24143F020058D1C5 /* Hue-bluetooth.app */,
+				30F6E67224143F030058D1C5 /* Hue-bluetooth WatchKit App.app */,
+				30F6E68124143F030058D1C5 /* Hue-bluetooth WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30F6E66024143F020058D1C5 /* Hue-bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				30F6E66124143F020058D1C5 /* AppDelegate.swift */,
+				30F6E6A624143F5A0058D1C5 /* BleManager.swift */,
+				30F6E66324143F020058D1C5 /* SceneDelegate.swift */,
+				30F6E66524143F020058D1C5 /* ContentView.swift */,
+				30F6E66724143F030058D1C5 /* Assets.xcassets */,
+				30F6E66C24143F030058D1C5 /* LaunchScreen.storyboard */,
+				30F6E66F24143F030058D1C5 /* Info.plist */,
+				30F6E66924143F030058D1C5 /* Preview Content */,
+			);
+			path = "Hue-bluetooth";
+			sourceTree = "<group>";
+		};
+		30F6E66924143F030058D1C5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				30F6E66A24143F030058D1C5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		30F6E67624143F030058D1C5 /* Hue-bluetooth WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				30F6E67724143F030058D1C5 /* Interface.storyboard */,
+				30F6E67A24143F030058D1C5 /* Assets.xcassets */,
+				30F6E67C24143F030058D1C5 /* Info.plist */,
+			);
+			path = "Hue-bluetooth WatchKit App";
+			sourceTree = "<group>";
+		};
+		30F6E68524143F030058D1C5 /* Hue-bluetooth WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				30F6E68624143F030058D1C5 /* ContentView.swift */,
+				30F6E68824143F030058D1C5 /* HostingController.swift */,
+				30F6E68A24143F030058D1C5 /* ExtensionDelegate.swift */,
+				30F6E68C24143F030058D1C5 /* NotificationController.swift */,
+				30F6E68E24143F030058D1C5 /* NotificationView.swift */,
+				30F6E69024143F030058D1C5 /* ComplicationController.swift */,
+				30F6E69224143F040058D1C5 /* Assets.xcassets */,
+				30F6E69724143F040058D1C5 /* Info.plist */,
+				30F6E69824143F040058D1C5 /* PushNotificationPayload.apns */,
+				30F6E69424143F040058D1C5 /* Preview Content */,
+			);
+			path = "Hue-bluetooth WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		30F6E69424143F040058D1C5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				30F6E69524143F040058D1C5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30F6E65D24143F020058D1C5 /* Hue-bluetooth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30F6E6A324143F040058D1C5 /* Build configuration list for PBXNativeTarget "Hue-bluetooth" */;
+			buildPhases = (
+				30F6E65A24143F020058D1C5 /* Sources */,
+				30F6E65B24143F020058D1C5 /* Frameworks */,
+				30F6E65C24143F020058D1C5 /* Resources */,
+				30F6E6A224143F040058D1C5 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30F6E67524143F030058D1C5 /* PBXTargetDependency */,
+			);
+			name = "Hue-bluetooth";
+			productName = "Hue-bluetooth";
+			productReference = 30F6E65E24143F020058D1C5 /* Hue-bluetooth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		30F6E67124143F030058D1C5 /* Hue-bluetooth WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30F6E69F24143F040058D1C5 /* Build configuration list for PBXNativeTarget "Hue-bluetooth WatchKit App" */;
+			buildPhases = (
+				30F6E67024143F030058D1C5 /* Resources */,
+				30F6E69E24143F040058D1C5 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30F6E68424143F030058D1C5 /* PBXTargetDependency */,
+			);
+			name = "Hue-bluetooth WatchKit App";
+			productName = "Hue-bluetooth WatchKit App";
+			productReference = 30F6E67224143F030058D1C5 /* Hue-bluetooth WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		30F6E68024143F030058D1C5 /* Hue-bluetooth WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30F6E69B24143F040058D1C5 /* Build configuration list for PBXNativeTarget "Hue-bluetooth WatchKit Extension" */;
+			buildPhases = (
+				30F6E67D24143F030058D1C5 /* Sources */,
+				30F6E67E24143F030058D1C5 /* Frameworks */,
+				30F6E67F24143F030058D1C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hue-bluetooth WatchKit Extension";
+			productName = "Hue-bluetooth WatchKit Extension";
+			productReference = 30F6E68124143F030058D1C5 /* Hue-bluetooth WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30F6E65624143F010058D1C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Joerg Thalheim";
+				TargetAttributes = {
+					30F6E65D24143F020058D1C5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					30F6E67124143F030058D1C5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					30F6E68024143F030058D1C5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 30F6E65924143F010058D1C5 /* Build configuration list for PBXProject "Hue-bluetooth" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30F6E65524143F010058D1C5;
+			productRefGroup = 30F6E65F24143F020058D1C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30F6E65D24143F020058D1C5 /* Hue-bluetooth */,
+				30F6E67124143F030058D1C5 /* Hue-bluetooth WatchKit App */,
+				30F6E68024143F030058D1C5 /* Hue-bluetooth WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30F6E65C24143F020058D1C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30F6E66E24143F030058D1C5 /* LaunchScreen.storyboard in Resources */,
+				30F6E66B24143F030058D1C5 /* Preview Assets.xcassets in Resources */,
+				30F6E66824143F030058D1C5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30F6E67024143F030058D1C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30F6E67B24143F030058D1C5 /* Assets.xcassets in Resources */,
+				30F6E67924143F030058D1C5 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30F6E67F24143F030058D1C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30F6E69624143F040058D1C5 /* Preview Assets.xcassets in Resources */,
+				30F6E69324143F040058D1C5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30F6E65A24143F020058D1C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30F6E66224143F020058D1C5 /* AppDelegate.swift in Sources */,
+				30F6E6A724143F5A0058D1C5 /* BleManager.swift in Sources */,
+				30F6E66424143F020058D1C5 /* SceneDelegate.swift in Sources */,
+				30F6E66624143F020058D1C5 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30F6E67D24143F030058D1C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30F6E68924143F030058D1C5 /* HostingController.swift in Sources */,
+				30F6E68724143F030058D1C5 /* ContentView.swift in Sources */,
+				30F6E68D24143F030058D1C5 /* NotificationController.swift in Sources */,
+				30F6E68B24143F030058D1C5 /* ExtensionDelegate.swift in Sources */,
+				30F6E68F24143F030058D1C5 /* NotificationView.swift in Sources */,
+				30F6E69124143F030058D1C5 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30F6E67524143F030058D1C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30F6E67124143F030058D1C5 /* Hue-bluetooth WatchKit App */;
+			targetProxy = 30F6E67424143F030058D1C5 /* PBXContainerItemProxy */;
+		};
+		30F6E68424143F030058D1C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30F6E68024143F030058D1C5 /* Hue-bluetooth WatchKit Extension */;
+			targetProxy = 30F6E68324143F030058D1C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		30F6E66C24143F030058D1C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30F6E66D24143F030058D1C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		30F6E67724143F030058D1C5 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30F6E67824143F030058D1C5 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		30F6E69924143F040058D1C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		30F6E69A24143F040058D1C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30F6E69C24143F040058D1C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Hue-bluetooth WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Hue-bluetooth WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.thalheim.Hue-bluetooth.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		30F6E69D24143F040058D1C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Hue-bluetooth WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Hue-bluetooth WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.thalheim.Hue-bluetooth.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		30F6E6A024143F040058D1C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = Hue_bluetooth_WatchKit_Extension;
+				INFOPLIST_FILE = "Hue-bluetooth WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.thalheim.Hue-bluetooth.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		30F6E6A124143F040058D1C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = Hue_bluetooth_WatchKit_Extension;
+				INFOPLIST_FILE = "Hue-bluetooth WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.thalheim.Hue-bluetooth.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		30F6E6A424143F040058D1C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Hue-bluetooth/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Hue-bluetooth/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.thalheim.Hue-bluetooth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		30F6E6A524143F040058D1C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Hue-bluetooth/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Hue-bluetooth/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.thalheim.Hue-bluetooth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30F6E65924143F010058D1C5 /* Build configuration list for PBXProject "Hue-bluetooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30F6E69924143F040058D1C5 /* Debug */,
+				30F6E69A24143F040058D1C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30F6E69B24143F040058D1C5 /* Build configuration list for PBXNativeTarget "Hue-bluetooth WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30F6E69C24143F040058D1C5 /* Debug */,
+				30F6E69D24143F040058D1C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30F6E69F24143F040058D1C5 /* Build configuration list for PBXNativeTarget "Hue-bluetooth WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30F6E6A024143F040058D1C5 /* Debug */,
+				30F6E6A124143F040058D1C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30F6E6A324143F040058D1C5 /* Build configuration list for PBXNativeTarget "Hue-bluetooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30F6E6A424143F040058D1C5 /* Debug */,
+				30F6E6A524143F040058D1C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 30F6E65624143F010058D1C5 /* Project object */;
+}

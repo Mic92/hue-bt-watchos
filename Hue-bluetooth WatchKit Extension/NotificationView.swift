@@ -1,9 +1,9 @@
 //
 //  NotificationView.swift
-//  HueBT-watch WatchKit Extension
+//  Hue-bluetooth WatchKit Extension
 //
-//  Created by Shannan Lekwati on 29/02/2020.
-//  Copyright © 2020 Shannan Lekwati. All rights reserved.
+//  Created by Joerg Thalheim on 07/03/2020.
+//  Copyright © 2020 Joerg Thalheim. All rights reserved.
 //
 
 import SwiftUI
